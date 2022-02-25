@@ -12,6 +12,8 @@ use function Brain\Games\BrainGcd\questionBrainGcd;
 use function Brain\Games\BrainGcd\answerBrainGcd;
 use function Brain\Games\BraiProgression\questionBrainProgression;
 use function Brain\Games\BraiProgression\answerBrainProgression;
+use function Brain\Games\BraiPrime\questionBraiPrime;
+use function Brain\Games\BraiPrime\answerBrainBraiPrime;
 
 function gameQuestion($task)
 {
@@ -24,6 +26,8 @@ function gameQuestion($task)
             return questionBrainGcd();
         case ('What number is missing in the progression?'):
             return questionBrainProgression();
+        case ('Answer "yes" if given number is prime. Otherwise answer "no".'):
+            return questionBraiPrime();
     }
 }
 
@@ -38,6 +42,8 @@ function gameCorrectAnswer($task, $question)
             return answerBrainGcd($question);
         case ('What number is missing in the progression?'):
             return answerBrainProgression($question);
+        case ('Answer "yes" if given number is prime. Otherwise answer "no".'):
+            return answerBrainBraiPrime($question);
     }
 }
 
