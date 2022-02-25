@@ -10,6 +10,8 @@ use function Brain\Games\BrainCalc\questionBrainCalc;
 use function Brain\Games\BrainCalc\answerBrainCalc;
 use function Brain\Games\BrainGcd\questionBrainGcd;
 use function Brain\Games\BrainGcd\answerBrainGcd;
+use function Brain\Games\BraiProgression\questionBrainProgression;
+use function Brain\Games\BraiProgression\answerBrainProgression;
 
 function gameQuestion($task)
 {
@@ -20,6 +22,8 @@ function gameQuestion($task)
             return questionBrainCalc();
         case ('Find the greatest common divisor of given numbers.'):
             return questionBrainGcd();
+        case ('What number is missing in the progression?'):
+            return questionBrainProgression();
     }
 }
 
@@ -32,6 +36,8 @@ function gameCorrectAnswer($task, $question)
             return answerBrainCalc($question);
         case ('Find the greatest common divisor of given numbers.'):
             return answerBrainGcd($question);
+        case ('What number is missing in the progression?'):
+            return answerBrainProgression($question);
     }
 }
 

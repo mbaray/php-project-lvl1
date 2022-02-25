@@ -12,3 +12,5 @@ https://asciinema.org/a/OOtJ6SXPee0KeSda8Z4rmINlF
 https://asciinema.org/a/xA7oXyRCfPBSfe9XOjTBIRD9v
 ### make brain-gcd
 https://asciinema.org/a/qoKVHEVuZzAWyx2lbkLhrFcCr
+### make brain-progression
+https://asciinema.org/a/xfQ6jcIbq2qxhnfAa7ArVXjXP
