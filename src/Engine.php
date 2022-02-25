@@ -8,6 +8,8 @@ use function Brain\Games\BrainEven\questionBrainEven;
 use function Brain\Games\BrainEven\answerBrainEven;
 use function Brain\Games\BrainCalc\questionBrainCalc;
 use function Brain\Games\BrainCalc\answerBrainCalc;
+use function Brain\Games\BrainGcd\questionBrainGcd;
+use function Brain\Games\BrainGcd\answerBrainGcd;
 
 function gameQuestion($task)
 {
@@ -16,6 +18,8 @@ function gameQuestion($task)
             return questionBrainEven();
         case ('What is the result of the expression?'):
             return questionBrainCalc();
+        case ('Find the greatest common divisor of given numbers.'):
+            return questionBrainGcd();
     }
 }
 
@@ -26,6 +30,8 @@ function gameCorrectAnswer($task, $question)
             return answerBrainEven($question);
         case ('What is the result of the expression?'):
             return answerBrainCalc($question);
+        case ('Find the greatest common divisor of given numbers.'):
+            return answerBrainGcd($question);
     }
 }
 
