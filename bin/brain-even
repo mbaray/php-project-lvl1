@@ -10,6 +10,10 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use Brain\Games\Cli;
+use function Brain\Games\Cli\welcome;
+use function Brain\Games\BrainEven\questionBrainEven;
+use function Brain\Games\BrainEven\checkBrainEven;
 
-Cli\welcome();
+$name = welcome();
+questionBrainEven();
+checkBrainEven($name);
