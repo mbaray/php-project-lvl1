@@ -14,4 +14,4 @@ use function Brain\Games\Cli\welcome;
 use function Brain\Games\Engine\checkGame;
 
 $name = welcome();
-checkGame('Answer "yes" if the number is even, otherwise answer "no".', $name);
+checkGame('What is the result of the expression?', $name);
