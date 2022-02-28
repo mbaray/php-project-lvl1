@@ -21,5 +21,5 @@ function answerBrainProgression(string $question)
     $pass = array_search('..', $arr, true);
     $difference = $pass <= 1 ? (int)$arr[9] - (int)$arr[8] : (int)$arr[1] - (int)$arr[0];
 
-    return (int)$pass <= 1 ? (int)$arr[$pass + 2] - 2 * $difference : 2 * $difference + (int)$arr[$pass - 2];
+    return (int)$pass <= 1 ? (int)$arr[(int)$pass + 2] - 2 * $difference : 2 * $difference + (int)$arr[(int)$pass - 2];
 }
