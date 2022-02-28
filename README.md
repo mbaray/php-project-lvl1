@@ -7,12 +7,12 @@
 ### make install
 https://asciinema.org/a/vSLdgdwrLmh7RjxxNZNzVUplz
 ### make brain-even
-https://asciinema.org/a/OOtJ6SXPee0KeSda8Z4rmINlF
+https://asciinema.org/a/xBSfGzecUVDphvEMgGyvSgMzy
 ### make brain-calc
-https://asciinema.org/a/xA7oXyRCfPBSfe9XOjTBIRD9v
+https://asciinema.org/a/mQ0dLmDVLOTOT6AZ3MdlLMGcG
 ### make brain-gcd
-https://asciinema.org/a/qoKVHEVuZzAWyx2lbkLhrFcCr
+https://asciinema.org/a/NGpP0J8NR4pObQWYf1neFO9sU
 ### make brain-progression
-https://asciinema.org/a/xfQ6jcIbq2qxhnfAa7ArVXjXP
+https://asciinema.org/a/R3WFG8XKaHRK59sSVDR0QKE9J
 ### make brain-prime
-https://asciinema.org/a/RcSG5EVOkMVGZeJafPn2eL2BE
+https://asciinema.org/a/49zjAUb0vuWVvGqS8UBRh2DJL
