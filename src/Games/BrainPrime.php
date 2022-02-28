@@ -21,7 +21,7 @@ function is_prime(int $number)
     return 'yes';
 }
 
-function answerBrainBraiPrime($question)
+function answerBrainBraiPrime(string $question)
 {
     return is_prime((int)$question);
 }
