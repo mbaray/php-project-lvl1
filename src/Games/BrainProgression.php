@@ -17,5 +17,6 @@ function questionBrainProgression()
 function answerBrainProgression($question)
 {
     $arr = explode(" ", $question);
-    return $arr[1] !== ".." && $arr[0] !== ".." ? $arr[1] - $arr[0] : $arr[9] - $arr[8];
+    $pass = array_search('..', $arr);
+    return $pass <= 1 ? $arr[$pass + 2] - 2 * ($arr[9] - $arr[8]) : 2 * ($arr[1] - $arr[0]) + $arr[$pass - 2];
 }
