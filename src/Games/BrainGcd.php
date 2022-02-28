@@ -20,5 +20,6 @@ function gcd(int $firstNumber, int $secondNumber)
 function answerBrainGcd(string $question)
 {
     $numbers = explode(" ", $question);
-    return gcd((int)$numbers[0], (int)$numbers[1]);
+    [$firstNumber, $secondNumber] = $numbers;
+    return gcd((int)$firstNumber, (int)$secondNumber);
 }
