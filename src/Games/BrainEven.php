@@ -7,7 +7,7 @@ function questionBrainEven()
     return rand(0, 100);
 }
 
-function answerBrainEven($question)
+function answerBrainEven(string $question)
 {
-    return ($question % 2 === 0) ? 'yes' : 'no';
+    return ((int)$question % 2 === 0) ? 'yes' : 'no';
 }

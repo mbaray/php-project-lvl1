@@ -8,7 +8,7 @@ function questionBrainCalc()
     return rand(0, 50) . " " . $operator . " " . rand(0, 50);
 }
 
-function answerBrainCalc($question)
+function answerBrainCalc(string $question)
 {
     return eval("return $question;");
 }

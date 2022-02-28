@@ -7,17 +7,17 @@ function questionBrainGcd()
     return rand(0, 100) . " " . rand(0, 100);
 }
 
-function gcd($n, $m)
+function gcd(int $firstNumber, int $secondNumber)
 {
     while (true) {
-        if ($n == $m) {
-            return $m;
+        if ($firstNumber == $secondNumber) {
+            return $secondNumber;
         }
-        $n > $m ? $n -= $m : $m -= $n;
+        $firstNumber > $secondNumber ? $firstNumber -= $secondNumber : $secondNumber -= $firstNumber;
     }
 }
 
-function answerBrainGcd($question)
+function answerBrainGcd(string $question)
 {
     $numbers = explode(" ", $question);
     return gcd($numbers[0], $numbers[1]);

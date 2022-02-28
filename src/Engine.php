@@ -15,7 +15,7 @@ use function Brain\Games\BraiProgression\answerBrainProgression;
 use function Brain\Games\BraiPrime\questionBraiPrime;
 use function Brain\Games\BraiPrime\answerBrainBraiPrime;
 
-function gameQuestion($task)
+function gameQuestion(string $task)
 {
     switch ($task) {
         case ('Answer "yes" if the number is even, otherwise answer "no".'):
@@ -31,7 +31,7 @@ function gameQuestion($task)
     }
 }
 
-function gameCorrectAnswer($task, $question)
+function gameCorrectAnswer(string $task, string $question)
 {
     switch ($task) {
         case ('Answer "yes" if the number is even, otherwise answer "no".'):
@@ -47,7 +47,7 @@ function gameCorrectAnswer($task, $question)
     }
 }
 
-function checkGame($task, $name)
+function checkGame(string $task, string $name)
 {
     line($task);
 
