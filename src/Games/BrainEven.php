@@ -9,5 +9,5 @@ function questionBrainEven()
 
 function answerBrainEven($question)
 {
-    return ((int)$question % 2 === 0) ? 'yes' : 'no';
+    return ($question % 2 === 0) ? 'yes' : 'no';
 }

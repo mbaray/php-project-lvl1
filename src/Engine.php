@@ -52,7 +52,7 @@ function checkGame($task, $name)
     line($task);
 
     $i = 0;
-    while ($i !== 3) {
+    while ($i < 3) {
         $question = gameQuestion($task);
         $correctAnswer = gameCorrectAnswer($task, $question);
 
@@ -64,8 +64,10 @@ function checkGame($task, $name)
             $i++;
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\nLet's try again, {$name}!");
-            $i = 0;
+            break;
         }
     }
-    line("Congratulations, {$name}!");
+    if ($i == 3) {
+        line("Congratulations, {$name}!");
+    }
 }
