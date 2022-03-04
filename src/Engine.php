@@ -15,46 +15,46 @@ use function Brain\Games\BraiProgression\answerBrainProgression;
 use function Brain\Games\BraiPrime\questionBraiPrime;
 use function Brain\Games\BraiPrime\answerBrainBraiPrime;
 
-function gameQuestion(string $task)
+function gameQuestion(string $gameName)
 {
-    switch ($task) {
-        case ('Answer "yes" if the number is even, otherwise answer "no".'):
+    switch ($gameName) {
+        case ('brain-even'):
             return questionBrainEven();
-        case ('What is the result of the expression?'):
+        case ('brain-calc'):
             return questionBrainCalc();
-        case ('Find the greatest common divisor of given numbers.'):
+        case ('brain-gcd'):
             return questionBrainGcd();
-        case ('What number is missing in the progression?'):
+        case ('brain-progression'):
             return questionBrainProgression();
-        case ('Answer "yes" if given number is prime. Otherwise answer "no".'):
+        case ('brain-prime'):
             return questionBraiPrime();
     }
 }
 
-function gameCorrectAnswer(string $task, string $question)
+function gameCorrectAnswer(string $gameName, string $question)
 {
-    switch ($task) {
-        case ('Answer "yes" if the number is even, otherwise answer "no".'):
+    switch ($gameName) {
+        case ('brain-even'):
             return answerBrainEven($question);
-        case ('What is the result of the expression?'):
+        case ('brain-calc'):
             return answerBrainCalc($question);
-        case ('Find the greatest common divisor of given numbers.'):
+        case ('brain-gcd'):
             return answerBrainGcd($question);
-        case ('What number is missing in the progression?'):
+        case ('brain-progression'):
             return answerBrainProgression($question);
-        case ('Answer "yes" if given number is prime. Otherwise answer "no".'):
+        case ('brain-prime'):
             return answerBrainBraiPrime($question);
     }
 }
 
-function checkGame(string $task, string $name)
+function checkGame(string $task, string $name, string $gameName)
 {
     line($task);
 
     $i = 0;
     while ($i < 3) {
-        $question = gameQuestion($task);
-        $correctAnswer = gameCorrectAnswer($task, $question);
+        $question = gameQuestion($gameName);
+        $correctAnswer = gameCorrectAnswer($gameName, $question);
 
         line("Question: {$question}");
         $answer = prompt('Your answer');
