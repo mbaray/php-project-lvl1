@@ -29,7 +29,7 @@ function checkGame(string $task, string $name, string $gameName)
         line("Question: {$question}");
         $answer = prompt('Your answer');
 
-        if ($correctAnswer == $answer) {
+        if ($correctAnswer === $answer) {
             line('Correct!');
             $i++;
         } else {
@@ -37,7 +37,7 @@ function checkGame(string $task, string $name, string $gameName)
             break;
         }
     }
-    if ($i == $questionsCount) {
+    if ($i === $questionsCount) {
         line("Congratulations, {$name}!");
     }
 }

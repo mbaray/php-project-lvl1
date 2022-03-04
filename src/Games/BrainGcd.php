@@ -10,7 +10,7 @@ function questionBrainGcd()
 function gcd(int $firstNumber, int $secondNumber)
 {
     while (true) {
-        if ($firstNumber == $secondNumber) {
+        if ($firstNumber === $secondNumber) {
             return $secondNumber;
         }
         $firstNumber > $secondNumber ? $firstNumber -= $secondNumber : $secondNumber -= $firstNumber;
