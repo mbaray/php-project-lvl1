@@ -1,6 +1,6 @@
 {
     "name": "hexlet/code",
-	"bin": [
+    "bin": [
         "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
@@ -8,8 +8,8 @@
         "bin/brain-progression",
         "bin/brain-prime"       
     ],
-	"description": "hexlet php-package",
-	"license": "MIT",
+    "description": "hexlet php-package",
+    "license": "MIT",
     "autoload": {
         "files": [
             "src/Cli.php",
