@@ -15,6 +15,33 @@ use function Brain\Games\BraiProgression\answerBrainProgression;
 use function Brain\Games\BraiPrime\questionBraiPrime;
 use function Brain\Games\BraiPrime\answerBrainBraiPrime;
 
+function checkGame(string $task, string $name, string $gameName)
+{
+    line($task);
+
+    $i = 0;
+    $questionsCount = 3;
+
+    while ($i < $questionsCount) {
+        $question = gameQuestion($gameName);
+        $correctAnswer = gameCorrectAnswer($gameName, $question);
+
+        line("Question: {$question}");
+        $answer = prompt('Your answer');
+
+        if ($correctAnswer == $answer) {
+            line('Correct!');
+            $i++;
+        } else {
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\nLet's try again, {$name}!");
+            break;
+        }
+    }
+    if ($i == $questionsCount) {
+        line("Congratulations, {$name}!");
+    }
+}
+
 function gameQuestion(string $gameName)
 {
     switch ($gameName) {
@@ -44,32 +71,5 @@ function gameCorrectAnswer(string $gameName, string $question)
             return answerBrainProgression($question);
         case ('brain-prime'):
             return answerBrainBraiPrime($question);
-    }
-}
-
-function checkGame(string $task, string $name, string $gameName)
-{
-    line($task);
-
-    $i = 0;
-    $questionsCount = 3;
-
-    while ($i < $questionsCount) {
-        $question = gameQuestion($gameName);
-        $correctAnswer = gameCorrectAnswer($gameName, $question);
-
-        line("Question: {$question}");
-        $answer = prompt('Your answer');
-
-        if ($correctAnswer == $answer) {
-            line('Correct!');
-            $i++;
-        } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\nLet's try again, {$name}!");
-            break;
-        }
-    }
-    if ($i == $questionsCount) {
-        line("Congratulations, {$name}!");
     }
 }
