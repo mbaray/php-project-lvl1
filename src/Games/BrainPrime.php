@@ -7,7 +7,7 @@ function questionBraiPrime()
     return rand(0, 100);
 }
 
-function is_prime(int $number)
+function isPrime(int $number)
 {
     if ($number <= 1) {
         return 'no';
@@ -23,5 +23,5 @@ function is_prime(int $number)
 
 function answerBrainBraiPrime(string $question)
 {
-    return is_prime((int)$question);
+    return isPrime((int)$question);
 }
