@@ -19,10 +19,7 @@
             "src/Games/BrainGcd.php",
             "src/Games/BrainProgression.php",
             "src/Games/BrainPrime.php"
-        ],
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
+        ]
     },
     "authors": [
         {
