@@ -52,7 +52,9 @@ function checkGame(string $task, string $name, string $gameName)
     line($task);
 
     $i = 0;
-    while ($i < 3) {
+    $questionsCount = 3;
+
+    while ($i < $questionsCount) {
         $question = gameQuestion($gameName);
         $correctAnswer = gameCorrectAnswer($gameName, $question);
 
@@ -67,7 +69,7 @@ function checkGame(string $task, string $name, string $gameName)
             break;
         }
     }
-    if ($i == 3) {
+    if ($i == $questionsCount) {
         line("Congratulations, {$name}!");
     }
 }
