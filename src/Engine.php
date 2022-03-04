@@ -52,8 +52,7 @@ function checkGame(string $task, string $name, string $gameName)
     line($task);
 
     $i = 0;
-    $questionsCount = 3;
-    while ($i < $questionsCount) {
+    while ($i < 3) {
         $question = gameQuestion($gameName);
         $correctAnswer = gameCorrectAnswer($gameName, $question);
 
