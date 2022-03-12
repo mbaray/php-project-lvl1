@@ -11,7 +11,7 @@ function checkGame(string $task, string $name, string $gameName)
     $function = "\\Brain\\Games\\{$gameName}\\taskGenerating";
     [$question, $correctAnswer] = $function();
     $i = 0;
-    $questionsCount = 3;    
+    $questionsCount = 3;
 
     while ($i < $questionsCount) {
         line("Question: {$question}");

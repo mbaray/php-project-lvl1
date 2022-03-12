@@ -24,4 +24,3 @@ function taskGenerating()
 
     return [$question, $correctAnswer];
 }
-
