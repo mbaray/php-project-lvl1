@@ -9,7 +9,10 @@ function checkGame(string $task, string $name, string $gameName)
 {
     line($task);
     $function = "\\Brain\\Games\\{$gameName}\\taskGenerating";
-    [$question, $correctAnswer] = $function();
+    if (function_exists($function)) {
+        [$question, $correctAnswer] = $function();
+    }
+
     $i = 0;
     $questionsCount = 3;
 

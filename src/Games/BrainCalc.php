@@ -10,6 +10,7 @@ function taskGenerating()
     $operator = substr(str_shuffle('+-*'), 0, 1);
     $question = $firstNumber . " " . $operator . " " . $secondNumber;
 
+    $correctAnswer = '';
     switch ($operator) {
         case ('+'):
             $correctAnswer = $firstNumber + $secondNumber;
