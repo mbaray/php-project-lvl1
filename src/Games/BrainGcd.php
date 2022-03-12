@@ -2,12 +2,12 @@
 
 namespace Brain\Games\BrainGcd;
 
-function task()
+function task(): string
 {
     return 'Find the greatest common divisor of given numbers.';
 }
 
-function gcd(int $firstNumber, int $secondNumber)
+function gcd(int $firstNumber, int $secondNumber): int
 {
     while (true) {
         if ($firstNumber == $secondNumber) {
@@ -17,7 +17,7 @@ function gcd(int $firstNumber, int $secondNumber)
     }
 }
 
-function taskGenerating()
+function taskGenerating(): array
 {
     $firstNumber = rand(0, 100);
     $secondNumber = rand(0, 100);
