@@ -2,14 +2,26 @@
 
 namespace Brain\Games\BrainCalc;
 
-function questionBrainCalc()
+function taskGenerating()
 {
+    $firstNumber = rand(0, 50);
+    $secondNumber = rand(0, 50);
+
     $operator = substr(str_shuffle('+-*'), 0, 1);
+    $question = $firstNumber . " " . $operator . " " . $secondNumber;
 
-    return rand(0, 50) . " " . $operator . " " . rand(0, 50);
+    switch ($operator) {
+        case ('+'):
+            $correctAnswer = $firstNumber + $secondNumber;
+            break;
+        case ('-'):
+            $correctAnswer = $firstNumber - $secondNumber;
+            break;
+        case ('*'):
+            $correctAnswer = $firstNumber * $secondNumber;
+            break;
+    }
+
+    return [$question, $correctAnswer];
 }
 
-function answerBrainCalc(string $question)
-{
-    return eval("return $question;");
-}

@@ -2,11 +2,6 @@
 
 namespace Brain\Games\BraiPrime;
 
-function questionBraiPrime()
-{
-    return rand(0, 100);
-}
-
 function isPrime(int $number)
 {
     if ($number <= 1) {
@@ -21,7 +16,8 @@ function isPrime(int $number)
     return 'yes';
 }
 
-function answerBrainBraiPrime(string $question)
+function taskGenerating()
 {
-    return isPrime((int)$question);
+    $question = rand(0, 100);
+    return [$question, isPrime($question)];
 }

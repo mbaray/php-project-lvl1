@@ -2,12 +2,8 @@
 
 namespace Brain\Games\BrainEven;
 
-function questionBrainEven()
+function taskGenerating()
 {
-    return rand(0, 100);
-}
-
-function answerBrainEven(string $question)
-{
-    return ((int)$question % 2 === 0) ? 'yes' : 'no';
+    $question = rand(0, 100);
+    return [$question, ($question % 2 === 0) ? 'yes' : 'no'];
 }

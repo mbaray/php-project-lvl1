@@ -2,7 +2,7 @@
 
 namespace Brain\Games\BraiProgression;
 
-function questionBrainProgression()
+function taskGenerating()
 {
     $difference = rand(0, 10);
     $arr = [];
@@ -10,16 +10,10 @@ function questionBrainProgression()
     for ($i = 1; $i < 10; $i++) {
         $arr[$i] = $arr[$i - 1] + $difference;
     }
-    $arr[rand(0, 10)] = '..';
+    $pass = rand(0, 10);
+    $correctAnswer = $arr[$pass];
+    $arr[$pass] = '..';
+    $question = implode(" ", $arr);
 
-    return implode(" ", $arr);
-}
-
-function answerBrainProgression(string $question)
-{
-    $arr = explode(" ", $question);
-    $pass = array_search('..', $arr, true);
-    $difference = $pass <= 1 ? (int)$arr[9] - (int)$arr[8] : (int)$arr[1] - (int)$arr[0];
-
-    return (int)$pass <= 1 ? (int)$arr[(int)$pass + 2] - 2 * $difference : 2 * $difference + (int)$arr[(int)$pass - 2];
+    return [$question, $correctAnswer];
 }

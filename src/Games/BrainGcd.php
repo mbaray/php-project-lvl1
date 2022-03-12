@@ -2,11 +2,6 @@
 
 namespace Brain\Games\BrainGcd;
 
-function questionBrainGcd()
-{
-    return rand(0, 100) . " " . rand(0, 100);
-}
-
 function gcd(int $firstNumber, int $secondNumber)
 {
     while (true) {
@@ -17,10 +12,11 @@ function gcd(int $firstNumber, int $secondNumber)
     }
 }
 
-function answerBrainGcd(string $question)
+function taskGenerating()
 {
-    $numbers = explode(" ", $question);
-    [$firstNumber, $secondNumber] = $numbers;
+    $firstNumber = rand(0, 100);
+    $secondNumber = rand(0, 100);
+    $question = $firstNumber . ' ' . $secondNumber;
 
-    return gcd((int)$firstNumber, (int)$secondNumber);
+    return [$question, gcd($firstNumber, $secondNumber)];
 }
