@@ -15,4 +15,4 @@ use function Brain\Games\Engine\checkGame;
 
 $name = welcome();
 $gameName = 'BrainCalc';
-checkGame('What is the result of the expression?', $name, $gameName);
+checkGame($name, $gameName);

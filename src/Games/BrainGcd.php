@@ -2,6 +2,11 @@
 
 namespace Brain\Games\BrainGcd;
 
+function task()
+{
+    return 'Find the greatest common divisor of given numbers.';
+}
+
 function gcd(int $firstNumber, int $secondNumber)
 {
     while (true) {

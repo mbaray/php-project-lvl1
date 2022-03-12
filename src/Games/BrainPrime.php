@@ -2,6 +2,11 @@
 
 namespace Brain\Games\BraiPrime;
 
+function task()
+{
+    return 'Answer "yes" if given number is prime. Otherwise answer "no".';
+}
+
 function isPrime(int $number)
 {
     if ($number <= 1) {

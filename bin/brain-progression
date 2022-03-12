@@ -15,4 +15,4 @@ use function Brain\Games\Engine\checkGame;
 
 $name = welcome();
 $gameName = 'BraiProgression';
-checkGame('What number is missing in the progression?', $name, $gameName);
+checkGame($name, $gameName);

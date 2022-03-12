@@ -15,4 +15,4 @@ use function Brain\Games\Engine\checkGame;
 
 $name = welcome();
 $gameName = 'BrainGcd';
-checkGame('Find the greatest common divisor of given numbers.', $name, $gameName);
+checkGame($name, $gameName);
