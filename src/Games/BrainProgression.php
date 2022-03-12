@@ -10,10 +10,10 @@ function taskGenerating()
     for ($i = 1; $i < 10; $i++) {
         $arr[$i] = $arr[$i - 1] + $difference;
     }
-    $pass = rand(0, 10);
+    $pass = rand(0, 9);
     $correctAnswer = $arr[$pass];
     $arr[$pass] = '..';
-    $question = implode(" ", $arr);
+    $question = implode(' ', $arr);
 
     return [$question, $correctAnswer];
 }
