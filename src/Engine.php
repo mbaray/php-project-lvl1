@@ -8,16 +8,12 @@ use function cli\prompt;
 function checkGame(string $name, string $gameName)
 {
     $functionTask = "\\Brain\\Games\\{$gameName}\\task";
-    if (function_exists($functionTask)) {
-        line($functionTask());
-    }
+    line($functionTask());
 
     $function = "\\Brain\\Games\\{$gameName}\\taskGenerating";
     $question = '';
     $correctAnswer = '';
-    if (function_exists($function)) {
-        [$question, $correctAnswer] = $function();
-    }
+    [$question, $correctAnswer] = $function();
 
     $i = 0;
     $questionsCount = 3;
