@@ -7,6 +7,12 @@ function task(): string
     return 'Answer "yes" if given number is prime. Otherwise answer "no".';
 }
 
+function taskGenerating(): array
+{
+    $question = rand(0, 100);
+    return [$question, isPrime($question)];
+}
+
 function isPrime(int $number): string
 {
     if ($number <= 1) {
@@ -19,10 +25,4 @@ function isPrime(int $number): string
         }
     }
     return 'yes';
-}
-
-function taskGenerating(): array
-{
-    $question = rand(0, 100);
-    return [$question, isPrime($question)];
 }

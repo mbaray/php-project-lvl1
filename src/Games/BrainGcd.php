@@ -7,16 +7,6 @@ function task(): string
     return 'Find the greatest common divisor of given numbers.';
 }
 
-function gcd(int $firstNumber, int $secondNumber): int
-{
-    while (true) {
-        if ($firstNumber == $secondNumber) {
-            return $secondNumber;
-        }
-        $firstNumber > $secondNumber ? $firstNumber -= $secondNumber : $secondNumber -= $firstNumber;
-    }
-}
-
 function taskGenerating(): array
 {
     $firstNumber = rand(0, 100);
@@ -24,4 +14,17 @@ function taskGenerating(): array
     $question = $firstNumber . ' ' . $secondNumber;
 
     return [$question, gcd($firstNumber, $secondNumber)];
+}
+
+function gcd(int $firstNumber, int $secondNumber): int
+{
+    while (true) {
+        if ($firstNumber == $secondNumber) {
+            return $secondNumber;
+        } elseif ($firstNumber > $secondNumber) {
+            $firstNumber -= $secondNumber;
+        } else {
+            $secondNumber -= $firstNumber;
+        }
+    }
 }

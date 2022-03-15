@@ -5,22 +5,25 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function checkGame(string $name, string $gameName)
+function checkGame(string $gameName)
 {
-    /** @var callable $functionTask */
-    $functionTask = "\\Brain\\Games\\{$gameName}\\task";
-    line($functionTask());
+    $name = welcome();
 
-    /** @var callable $function */
-    $function = "\\Brain\\Games\\{$gameName}\\taskGenerating";
     $question = '';
     $correctAnswer = '';
-    [$question, $correctAnswer] = $function();
-
     $i = 0;
     $questionsCount = 3;
 
     while ($i < $questionsCount) {
+
+        /** @var callable $functionTask */
+        $functionTask = "\\Brain\\Games\\{$gameName}\\task";
+        line($functionTask());
+
+        /** @var callable $function */
+        $function = "\\Brain\\Games\\{$gameName}\\taskGenerating";
+        [$question, $correctAnswer] = $function();
+
         line("Question: {$question}");
         $answer = prompt('Your answer');
 
@@ -35,4 +38,13 @@ function checkGame(string $name, string $gameName)
     if ($i == $questionsCount) {
         line("Congratulations, {$name}!");
     }
+}
+
+function welcome(): string
+{
+    line('Welcome to the Brain Games!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+
+    return $name;
 }

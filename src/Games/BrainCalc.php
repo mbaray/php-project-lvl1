@@ -13,7 +13,7 @@ function taskGenerating(): array
     $secondNumber = rand(0, 50);
 
     $operator = substr(str_shuffle('+-*'), 0, 1);
-    $question = $firstNumber . " " . $operator . " " . $secondNumber;
+    $question = $firstNumber . ' ' . $operator . ' ' . $secondNumber;
 
     $correctAnswer = '';
     switch ($operator) {
