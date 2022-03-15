@@ -27,17 +27,15 @@ function checkGame(string $gameName)
         line("Question: {$question}");
         $answer = prompt('Your answer');
 
-        if ($correctAnswer == $answer) {
+        if ((string)$correctAnswer === $answer) {
             line('Correct!');
             $i++;
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\nLet's try again, {$name}!");
-            break;
+            return;
         }
     }
-    if ($i == $questionsCount) {
-        line("Congratulations, {$name}!");
-    }
+    line("Congratulations, {$name}!");
 }
 
 function welcome(): string

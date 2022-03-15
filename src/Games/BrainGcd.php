@@ -19,7 +19,7 @@ function taskGenerating(): array
 function gcd(int $firstNumber, int $secondNumber): int
 {
     while (true) {
-        if ($firstNumber == $secondNumber) {
+        if ($firstNumber === $secondNumber) {
             return $secondNumber;
         } elseif ($firstNumber > $secondNumber) {
             $firstNumber -= $secondNumber;
