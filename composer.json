@@ -12,7 +12,6 @@
     "license": "MIT",
     "autoload": {
         "files": [
-            "src/Cli.php",
             "src/Games/BrainEven.php",
             "src/Engine.php",
             "src/Games/BrainCalc.php",
