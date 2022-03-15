@@ -7,9 +7,11 @@ use function cli\prompt;
 
 function checkGame(string $name, string $gameName)
 {
+    /** @var callable $functionTask */
     $functionTask = "\\Brain\\Games\\{$gameName}\\task";
     line($functionTask());
 
+    /** @var callable $function */
     $function = "\\Brain\\Games\\{$gameName}\\taskGenerating";
     $question = '';
     $correctAnswer = '';
