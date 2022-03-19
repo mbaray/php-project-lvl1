@@ -21,7 +21,7 @@ function gcd(int $firstNumber, int $secondNumber): int
     while (true) {
         if ($firstNumber === $secondNumber) {
             return $secondNumber;
-        } 
+        }
 
         if ($firstNumber > $secondNumber) {
             $firstNumber -= $secondNumber;

@@ -8,11 +8,11 @@ use function cli\prompt;
 function run(string $gameName): void
 {
     $name = welcome();
+    /** @var callable $getDescription */
+    $getDescription = "\\Brain\\Games\\{$gameName}\\getDescription";
+    line($getDescription());
 
     for ($i = 0, $questionsCount = 3; $i < $questionsCount; $i++) {
-        /** @var callable $getDescription */
-        $getDescription = "\\Brain\\Games\\{$gameName}\\getDescription";
-        line($getDescription());
 
         /** @var callable $getRoundData */
         $getRoundData = "\\Brain\\Games\\{$gameName}\\getRoundData";
