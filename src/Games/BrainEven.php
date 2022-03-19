@@ -2,12 +2,12 @@
 
 namespace Brain\Games\BrainEven;
 
-function task(): string
+function getDescription(): string
 {
     return 'Answer "yes" if the number is even, otherwise answer "no".';
 }
 
-function taskGenerating(): array
+function getRoundData(): array
 {
     $question = rand(0, 100);
     return [$question, ($question % 2 === 0) ? 'yes' : 'no'];

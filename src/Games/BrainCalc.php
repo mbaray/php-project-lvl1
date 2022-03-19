@@ -2,12 +2,12 @@
 
 namespace Brain\Games\BrainCalc;
 
-function task(): string
+function getDescription(): string
 {
     return 'What is the result of the expression?';
 }
 
-function taskGenerating(): array
+function getRoundData(): array
 {
     $firstNumber = rand(0, 50);
     $secondNumber = rand(0, 50);

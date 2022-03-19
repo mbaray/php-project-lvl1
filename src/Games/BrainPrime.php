@@ -2,12 +2,12 @@
 
 namespace Brain\Games\BraiPrime;
 
-function task(): string
+function getDescription(): string
 {
     return 'Answer "yes" if given number is prime. Otherwise answer "no".';
 }
 
-function taskGenerating(): array
+function getRoundData(): array
 {
     $question = rand(0, 100);
     return [$question, isPrime($question) ? 'yes' : 'no'];

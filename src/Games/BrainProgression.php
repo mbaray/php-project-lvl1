@@ -2,12 +2,12 @@
 
 namespace Brain\Games\BraiProgression;
 
-function task(): string
+function getDescription(): string
 {
     return 'What number is missing in the progression?';
 }
 
-function taskGenerating(): array
+function getRoundData(): array
 {
     $difference = rand(0, 10);
     $arr = [];

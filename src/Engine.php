@@ -5,31 +5,24 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function checkGame(string $gameName)
+function run(string $gameName): void
 {
     $name = welcome();
 
-    $question = '';
-    $correctAnswer = '';
-    $i = 0;
-    $questionsCount = 3;
+    for ($i = 0, $questionsCount = 3; $i < $questionsCount; $i++) {
+        /** @var callable $getDescription */
+        $getDescription = "\\Brain\\Games\\{$gameName}\\getDescription";
+        line($getDescription());
 
-    while ($i < $questionsCount) {
-
-        /** @var callable $functionTask */
-        $functionTask = "\\Brain\\Games\\{$gameName}\\task";
-        line($functionTask());
-
-        /** @var callable $function */
-        $function = "\\Brain\\Games\\{$gameName}\\taskGenerating";
-        [$question, $correctAnswer] = $function();
+        /** @var callable $getRoundData */
+        $getRoundData = "\\Brain\\Games\\{$gameName}\\getRoundData";
+        [$question, $correctAnswer] = $getRoundData();
 
         line("Question: {$question}");
         $answer = prompt('Your answer');
 
         if ((string)$correctAnswer === $answer) {
             line('Correct!');
-            $i++;
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\nLet's try again, {$name}!");
             return;
